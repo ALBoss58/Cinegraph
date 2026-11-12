@@ -1,0 +1,82 @@
+{
+ "comp": {
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "duration": 2.5,
+  "background": "#1c2026",
+  "camera": {
+   "position": [
+    640,
+    250,
+    -1100
+   ],
+   "poi": [
+    640,
+    420,
+    0
+   ],
+   "fov": 40
+  }
+ },
+ "layers": [
+  {
+   "primitive": "plane",
+   "size": [
+    3000,
+    3000
+   ],
+   "position": [
+    640,
+    560,
+    300
+   ],
+   "color": "#5b6b4a"
+  },
+  {
+   "src": "media/gltf/CesiumMan.glb",
+   "size": 330,
+   "position": [
+    420,
+    560,
+    0
+   ],
+   "rotation_y": -60,
+   "casts_shadows": true
+  },
+  {
+   "src": "media/gltf/Fox.glb",
+   "size": 330,
+   "position": [
+    860,
+    560,
+    0
+   ],
+   "rotation_y": 60,
+   "animation": "Run"
+  },
+  {
+   "type": "light",
+   "light_type": "directional",
+   "position": [
+    300,
+    -400,
+    -600
+   ],
+   "poi": [
+    640,
+    560,
+    0
+   ],
+   "intensity": 110,
+   "casts_shadows": true,
+   "color": "#fff1dc"
+  },
+  {
+   "type": "light",
+   "light_type": "ambient",
+   "intensity": 35,
+   "color": "#a9c1ff"
+  }
+ ]
+}

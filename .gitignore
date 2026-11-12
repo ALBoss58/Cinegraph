@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.cinegraph_cache/
+*.parts_*/
+*.bak
+*.tmp
+examples/media/gltf/
+.pytest_cache/

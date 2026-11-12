@@ -1,0 +1,44 @@
+{
+ "comp": {
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "duration": 4
+ },
+ "layers": [
+  {
+   "type": "image",
+   "src": "media/painting.png",
+   "effects": [
+    {
+     "type": "look",
+     "name": "archive_warm"
+    }
+   ],
+   "scale": {
+    "keys": [
+     [
+      0,
+      100
+     ],
+     [
+      4,
+      108
+     ]
+    ]
+   }
+  }
+ ],
+ "audio": [
+  {
+   "src": "media/speech.wav",
+   "role": "voice",
+   "duration": 4,
+   "voice": "broadcast"
+  }
+ ],
+ "captions": {
+  "auto": "media/speech.wav",
+  "style": "karaoke"
+ }
+}

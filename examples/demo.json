@@ -1,0 +1,712 @@
+{
+  "comp": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "duration": 15,
+    "background": "#05070a",
+    "motion_blur": {
+      "samples": 6,
+      "shutter": 180
+    },
+    "camera": {
+      "position": {
+        "keys": [
+          [
+            0,
+            [
+              960,
+              540,
+              -2400
+            ]
+          ],
+          [
+            5,
+            [
+              1020,
+              500,
+              -2050
+            ]
+          ]
+        ],
+        "ease": "in_out_sine"
+      },
+      "poi": {
+        "keys": [
+          [
+            0,
+            [
+              960,
+              540,
+              0
+            ]
+          ],
+          [
+            5,
+            [
+              1000,
+              520,
+              0
+            ]
+          ]
+        ],
+        "ease": "in_out_sine"
+      },
+      "fov": 40,
+      "dof": {
+        "focus_distance": 1500,
+        "aperture": 14,
+        "max_blur": 18
+      },
+      "fog": {
+        "color": "#0a0d14",
+        "near": 1800,
+        "far": 5000,
+        "amount": 0.6
+      },
+      "shake": {
+        "amount": 3,
+        "frequency": 0.8,
+        "rotation": 0.15
+      }
+    }
+  },
+  "layers": [
+    {
+      "type": "image",
+      "src": "media/painting.png",
+      "start": 0,
+      "duration": 5.2,
+      "three_d": true,
+      "position": [
+        960,
+        540,
+        1600
+      ],
+      "scale": 260,
+      "effects": [
+        {
+          "type": "color",
+          "saturation": 0.6,
+          "exposure": -0.6
+        }
+      ],
+      "id": "image1"
+    },
+    {
+      "type": "image",
+      "src": "media/map.jpg",
+      "start": 0,
+      "duration": 5.2,
+      "three_d": true,
+      "position": [
+        960,
+        560,
+        300
+      ],
+      "scale": 70,
+      "rotation_y": -8,
+      "masks": [
+        {
+          "shape": "ellipse",
+          "center": [
+            960,
+            540
+          ],
+          "size": [
+            1700,
+            950
+          ],
+          "feather": 180
+        }
+      ],
+      "id": "image2"
+    },
+    {
+      "type": "image",
+      "src": "media/emblem.png",
+      "start": 0,
+      "duration": 5.2,
+      "three_d": true,
+      "position": [
+        430,
+        330,
+        -500
+      ],
+      "scale": 60,
+      "effects": [
+        {
+          "type": "glow",
+          "threshold": 0.3,
+          "radius": 40,
+          "intensity": 0.6
+        }
+      ],
+      "id": "image3"
+    },
+    {
+      "type": "text",
+      "text": "RISE OF AN EAGLE",
+      "start": 0.4,
+      "duration": 4.8,
+      "three_d": true,
+      "font": "DejaVu Serif",
+      "bold": true,
+      "size": 118,
+      "color": "#f1dfb4",
+      "tracking": 40,
+      "position": [
+        960,
+        560,
+        -200
+      ],
+      "rotation_y": {
+        "keys": [
+          [
+            0,
+            -18
+          ],
+          [
+            4.8,
+            6
+          ]
+        ],
+        "ease": "in_out_sine"
+      },
+      "extrude": {
+        "depth": 26,
+        "color": "#6b4a1c"
+      },
+      "animator": {
+        "type": "rise",
+        "unit": "char",
+        "stagger": 0.05,
+        "duration": 0.7,
+        "offset": 40
+      },
+      "effects": [
+        {
+          "type": "drop_shadow",
+          "distance": 12,
+          "softness": 18,
+          "opacity": 0.6
+        }
+      ],
+      "transition_out": {
+        "type": "fade",
+        "duration": 0.5
+      },
+      "id": "text4"
+    },
+    {
+      "type": "particles",
+      "kind": "dust",
+      "start": 0,
+      "duration": 5.2,
+      "count": 160,
+      "opacity": 70,
+      "id": "particles5"
+    },
+    {
+      "type": "sequence",
+      "clips": [
+        {
+          "type": "video",
+          "src": "media/clip.mp4",
+          "in": 1.0,
+          "duration": 2.5,
+          "volume": -8,
+          "scale": {
+            "keys": [
+              [
+                0,
+                100
+              ],
+              [
+                2.5,
+                110
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "position": {
+            "keys": [
+              [
+                0,
+                [
+                  960.0,
+                  540.0
+                ]
+              ],
+              [
+                2.5,
+                [
+                  960.0,
+                  540.0
+                ]
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "effects": [
+            {
+              "type": "cartoon",
+              "levels": 7,
+              "edge": 0.7
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "media/map.jpg",
+          "duration": 3.5,
+          "scale": {
+            "keys": [
+              [
+                0,
+                105
+              ],
+              [
+                3.5,
+                118
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "position": {
+            "keys": [
+              [
+                0,
+                [
+                  960,
+                  540
+                ]
+              ],
+              [
+                3.5,
+                [
+                  1010,
+                  520
+                ]
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "effects": [
+            {
+              "type": "color",
+              "temperature": 25,
+              "contrast": 0.15,
+              "saturation": 0.8
+            },
+            {
+              "type": "old_film",
+              "amount": 0.6
+            }
+          ]
+        }
+      ],
+      "start": 5.0,
+      "id": "seq",
+      "transition": {
+        "type": "wipe_right",
+        "duration": 0.6,
+        "softness": 120
+      }
+    },
+    {
+      "type": "shape",
+      "start": 7.6,
+      "duration": 2.9,
+      "shapes": [
+        {
+          "kind": "path",
+          "points": [
+            [
+              300,
+              300
+            ],
+            [
+              700,
+              450
+            ],
+            [
+              1100,
+              380
+            ],
+            [
+              1500,
+              700
+            ]
+          ],
+          "smooth": true,
+          "stroke": "#c8102e",
+          "stroke_width": 7,
+          "arrow": true,
+          "trim_end": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                2.0,
+                100
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "dash": [
+            26,
+            14
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "drop_shadow",
+          "opacity": 0.45,
+          "distance": 2,
+          "softness": 6
+        }
+      ],
+      "id": "shape6"
+    },
+    {
+      "type": "shape",
+      "id": "lt_bar_7.8",
+      "start": 7.8,
+      "duration": 2.7,
+      "shapes": [
+        {
+          "kind": "path",
+          "points": [
+            [
+              120,
+              810
+            ],
+            [
+              120,
+              910
+            ]
+          ],
+          "stroke": "#d4af37",
+          "stroke_width": 6,
+          "trim_end": {
+            "keys": [
+              [
+                0,
+                0
+              ],
+              [
+                0.45,
+                100
+              ]
+            ],
+            "ease": "out_expo"
+          }
+        }
+      ],
+      "transition_out": {
+        "type": "fade",
+        "duration": 0.35
+      }
+    },
+    {
+      "type": "text",
+      "id": "lt_title_7.8",
+      "text": "NAPOLEON BONAPARTE",
+      "start": 7.95,
+      "duration": 2.5500000000000003,
+      "font": "Inter",
+      "bold": true,
+      "size": 54,
+      "align": "left",
+      "position": [
+        148,
+        844
+      ],
+      "anchor": [
+        0,
+        32
+      ],
+      "animator": {
+        "type": "rise",
+        "unit": "char",
+        "stagger": 0.018,
+        "duration": 0.45,
+        "offset": 24
+      },
+      "effects": [
+        {
+          "type": "drop_shadow",
+          "opacity": 0.5,
+          "distance": 3,
+          "softness": 8
+        }
+      ],
+      "transition_out": {
+        "type": "fade",
+        "duration": 0.35
+      }
+    },
+    {
+      "type": "text",
+      "id": "lt_sub_7.8",
+      "text": "First Consul of France, 1799",
+      "start": 8.25,
+      "duration": 2.25,
+      "font": "Inter",
+      "size": 32,
+      "color": "#d8d8d8",
+      "align": "left",
+      "position": [
+        148,
+        898
+      ],
+      "anchor": [
+        0,
+        20
+      ],
+      "tracking": 60,
+      "transition_in": {
+        "type": "fade",
+        "duration": 0.5
+      },
+      "transition_out": {
+        "type": "fade",
+        "duration": 0.35
+      }
+    },
+    {
+      "type": "text",
+      "text": "",
+      "start": 5.3,
+      "duration": 2.2,
+      "counter": {
+        "from": 1769,
+        "to": 1799,
+        "duration": 1.6,
+        "format": "{:.0f}"
+      },
+      "font": "DejaVu Serif",
+      "bold": true,
+      "size": 120,
+      "color": "#ffffff",
+      "position": [
+        1650,
+        160
+      ],
+      "box": {
+        "color": "#000000a0",
+        "padding": [
+          28,
+          10
+        ],
+        "radius": 10
+      },
+      "transition_in": {
+        "type": "zoom",
+        "duration": 0.4
+      },
+      "transition_out": {
+        "type": "fade",
+        "duration": 0.3
+      },
+      "id": "text10"
+    },
+    {
+      "type": "comp",
+      "comp": "painting_comp",
+      "start": 10.5,
+      "duration": 4.5,
+      "matte": {
+        "layer": "matte_text",
+        "mode": "alpha"
+      },
+      "id": "comp11"
+    },
+    {
+      "type": "text",
+      "text": "EMPIRE",
+      "start": 10.5,
+      "id": "matte_text",
+      "duration": 4.5,
+      "font": "DejaVu Sans",
+      "bold": true,
+      "size": 420,
+      "tracking": 40,
+      "scale": {
+        "keys": [
+          [
+            0,
+            80
+          ],
+          [
+            4.5,
+            105
+          ]
+        ],
+        "ease": "out_cubic"
+      }
+    },
+    {
+      "type": "text",
+      "text": "1804 \u2014 1815",
+      "start": 11.3,
+      "duration": 3.7,
+      "font": "DejaVu Serif",
+      "size": 64,
+      "color": "#e9e2cf",
+      "position": [
+        960,
+        820
+      ],
+      "tracking": 300,
+      "animator": {
+        "type": "typewriter",
+        "unit": "char",
+        "stagger": 0.06
+      },
+      "transition_out": {
+        "type": "dip_white",
+        "duration": 0.6
+      },
+      "id": "text13"
+    },
+    {
+      "type": "adjustment",
+      "effects": [
+        {
+          "type": "color",
+          "contrast": 0.08,
+          "lift": [
+            0.01,
+            0.015,
+            0.03
+          ],
+          "gain": [
+            1.03,
+            1.0,
+            0.95
+          ]
+        },
+        {
+          "type": "vignette",
+          "amount": 0.45
+        },
+        {
+          "type": "grain",
+          "amount": 0.035
+        },
+        {
+          "type": "letterbox",
+          "ratio": 2.2
+        }
+      ],
+      "start": 0,
+      "id": "finish"
+    }
+  ],
+  "audio": [
+    {
+      "src": "media/music.wav",
+      "start": 0,
+      "role": "music",
+      "volume": -6,
+      "fade_in": 1.5,
+      "fade_out": 2.0,
+      "duration": 15,
+      "loop": true
+    },
+    {
+      "src": "media/voice.wav",
+      "start": 1.0,
+      "role": "voice",
+      "volume": -3
+    }
+  ],
+  "comps": {
+    "painting_comp": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 4.5,
+      "background": "transparent",
+      "layers": [
+        {
+          "type": "image",
+          "src": "media/painting.png",
+          "start": 0,
+          "duration": 4.5,
+          "scale": {
+            "keys": [
+              [
+                0,
+                100
+              ],
+              [
+                4.5,
+                125
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "position": {
+            "keys": [
+              [
+                0,
+                [
+                  960.0,
+                  540.0
+                ]
+              ],
+              [
+                4.5,
+                [
+                  960.0,
+                  540.0
+                ]
+              ]
+            ],
+            "ease": "in_out_sine"
+          },
+          "effects": [
+            {
+              "type": "color",
+              "hue": 40,
+              "saturation": 1.3
+            }
+          ],
+          "id": "image1"
+        }
+      ]
+    }
+  },
+  "markers": [
+    {
+      "t": 0,
+      "name": "Cold open",
+      "chapter": true
+    },
+    {
+      "t": 5,
+      "name": "The Campaign",
+      "chapter": true
+    },
+    {
+      "t": 10.5,
+      "name": "Empire",
+      "chapter": true
+    }
+  ],
+  "assets": {},
+  "audio_settings": {
+    "duck": {
+      "amount_db": -12,
+      "attack": 0.1,
+      "release": 0.4
+    },
+    "loudness": -14
+  }
+}

@@ -1,0 +1,22 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.10", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - uses: FedericoCarboni/setup-ffmpeg@v3
+      - name: Headless GL (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libegl-mesa0 fonts-dejavu
+      - run: pip install -e .[ai,full,dev]
+      - run: python scripts/fetch_test_assets.py
+      - run: python examples/make_test_media.py
+      - run: python -m pytest -q tests

@@ -1,0 +1,26 @@
+{
+  "comp": {"width": 1920, "height": 1080, "fps": 30, "duration": 4, "background": "#101418",
+    "camera": {"position": {"keys": [[0, [460, 180, -1500]], [4, [1500, 220, -1400], "in_out_sine"]]},
+               "poi": [960, 640, 200], "fov": 45,
+               "dof": {"focus_distance": 1500, "aperture": 6, "max_blur": 10},
+               "fog": {"color": "#101418", "near": 2200, "far": 6000, "amount": 0.7}}},
+  "layers": [
+    {"id": "floor", "primitive": "plane", "size": [4000, 4000], "position": [960, 860, 400], "color": "#8a7a62",
+     "texture": "media/map.jpg", "material": {"specular": 0.05}},
+    {"id": "photo", "type": "image", "src": "media/painting.png", "three_d": true, "position": [960, 560, 700],
+     "scale": 55, "casts_shadows": true},
+    {"id": "cube", "primitive": "cube", "size": 220, "position": [700, 750, 250], "rotation_y": {"keys": [[0, 0], [4, 90]]},
+     "color": "#d64933", "material": {"toon": 3, "outline": 4, "specular": 0.5}, "flat_shading": true},
+    {"id": "ball", "primitive": "sphere", "radius": 120, "position": [1150, 740, 150], "texture": "media/map.jpg",
+     "material": {"specular": 0.6, "shininess": 64}},
+    {"id": "ring", "primitive": "torus", "radius": 110, "tube": 30, "position": [1400, 700, 450],
+     "rotation_x": 70, "rotation_z": {"keys": [[0, 0], [4, 180]]}, "color": "#d4af37", "material": {"specular": 0.9, "shininess": 90}},
+    {"id": "pawn", "src": "media/pawn.glb", "size": 300, "position": [450, 710, 500]},
+    {"id": "title", "type": "text", "text": "AUSTERLITZ", "three_d": true, "font": "DejaVu Serif", "bold": true, "size": 120,
+     "color": "#f1dfb4", "position": [960, 360, 600], "extrude": {"depth": 24, "color": "#6b4a1c"}, "casts_shadows": true},
+    {"id": "key", "type": "light", "light_type": "spot", "position": [500, 0, -200], "poi": [960, 800, 400],
+     "intensity": 140, "color": "#ffe9c4", "cone_angle": 80, "cone_feather": 40, "casts_shadows": true, "shadow_darkness": 85},
+    {"id": "fill", "type": "light", "light_type": "ambient", "intensity": 28, "color": "#9fb4ff"},
+    {"id": "rim", "type": "light", "light_type": "directional", "position": [1800, 300, 1200], "poi": [960, 700, 300], "intensity": 45, "color": "#7fa8ff"}
+  ]
+}

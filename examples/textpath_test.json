@@ -1,0 +1,100 @@
+{
+ "comp": {
+  "width": 1280,
+  "height": 720,
+  "duration": 3
+ },
+ "layers": [
+  {
+   "type": "image",
+   "src": "media/map.jpg",
+   "effects": [
+    {
+     "type": "look",
+     "name": "film_1970s"
+    }
+   ]
+  },
+  {
+   "type": "shape",
+   "shapes": [
+    {
+     "kind": "path",
+     "points": [
+      [
+       150,
+       500
+      ],
+      [
+       450,
+       300
+      ],
+      [
+       800,
+       420
+      ],
+      [
+       1150,
+       250
+      ]
+     ],
+     "smooth": true,
+     "stroke": "#c8102e",
+     "stroke_width": 5,
+     "dash": [
+      18,
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "type": "text",
+   "text": "THE ROAD TO MOSCOW \u00b7 1812",
+   "size": 40,
+   "bold": true,
+   "color": "#1a1a1a",
+   "tracking": 80,
+   "path": {
+    "points": [
+     [
+      150,
+      500
+     ],
+     [
+      450,
+      300
+     ],
+     [
+      800,
+      420
+     ],
+     [
+      1150,
+      250
+     ]
+    ],
+    "smooth": true,
+    "offset": {
+     "keys": [
+      [
+       0,
+       0
+      ],
+      [
+       3,
+       8
+      ]
+     ]
+    },
+    "baseline": 14
+   },
+   "animator": {
+    "type": "fade",
+    "unit": "char",
+    "stagger": 0.03,
+    "duration": 0.3
+   }
+  }
+ ]
+}

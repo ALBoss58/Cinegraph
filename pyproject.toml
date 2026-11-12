@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cinegraph"
+version = "0.3.0"
+description = "Free, code-driven compositor & video editor (keyframes, 3D camera, effects, grading, audio) built to be driven by Claude."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "opencv-python-headless>=4.6", "Pillow>=9.0", "moderngl>=5.8", "trimesh>=4.0"]
+
+[project.optional-dependencies]
+yaml = ["pyyaml"]
+ai = ["onnxruntime>=1.16", "sherpa-onnx>=1.10"]
+whisper = ["faster-whisper>=1.0"]
+full = ["opencolorio>=2.3", "opentimelineio>=0.17", "otio-cmx3600-adapter", "otio-fcp-adapter", "pygltflib>=1.16"]
+dev = ["pytest"]
+
+[project.scripts]
+cinegraph = "cinegraph.cli:main"
+
+[tool.setuptools]
+packages = ["cinegraph"]

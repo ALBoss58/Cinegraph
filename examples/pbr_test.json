@@ -1,0 +1,175 @@
+{
+ "comp": {
+  "width": 1280,
+  "height": 720,
+  "duration": 2.5,
+  "background": "#000",
+  "camera": {
+   "position": {
+    "keys": [
+     [
+      0,
+      [
+       700,
+       330,
+       -1100
+      ]
+     ],
+     [
+      2.5,
+      [
+       1220,
+       300,
+       -1000
+      ]
+     ]
+    ],
+    "ease": "in_out_sine"
+   },
+   "poi": [
+    960,
+    620,
+    350
+   ],
+   "fov": 45
+  },
+  "environment": {
+   "src": "media/sky.png",
+   "intensity": 0.9,
+   "background": true,
+   "background_blur": 0
+  },
+  "fps": 30
+ },
+ "layers": [
+  {
+   "primitive": "plane",
+   "size": [
+    4000,
+    4000
+   ],
+   "position": [
+    960,
+    720,
+    500
+   ],
+   "color": "#bdb6a8",
+   "material": {
+    "roughness": 0.8,
+    "metallic": 0
+   }
+  },
+  {
+   "primitive": "sphere",
+   "radius": 90,
+   "position": [
+    560,
+    560,
+    200
+   ],
+   "color": "#b8202a",
+   "material": {
+    "metallic": 0,
+    "roughness": 0.1
+   }
+  },
+  {
+   "primitive": "sphere",
+   "radius": 90,
+   "position": [
+    960,
+    560,
+    200
+   ],
+   "color": "#b8202a",
+   "material": {
+    "metallic": 0,
+    "roughness": 0.35
+   }
+  },
+  {
+   "primitive": "sphere",
+   "radius": 90,
+   "position": [
+    1360,
+    560,
+    200
+   ],
+   "color": "#b8202a",
+   "material": {
+    "metallic": 0,
+    "roughness": 0.7
+   }
+  },
+  {
+   "primitive": "sphere",
+   "radius": 90,
+   "position": [
+    560,
+    530,
+    550
+   ],
+   "color": "#d4af37",
+   "material": {
+    "metallic": 1,
+    "roughness": 0.1
+   }
+  },
+  {
+   "primitive": "sphere",
+   "radius": 90,
+   "position": [
+    960,
+    530,
+    550
+   ],
+   "color": "#d4af37",
+   "material": {
+    "metallic": 1,
+    "roughness": 0.35
+   }
+  },
+  {
+   "primitive": "sphere",
+   "radius": 90,
+   "position": [
+    1360,
+    530,
+    550
+   ],
+   "color": "#d4af37",
+   "material": {
+    "metallic": 1,
+    "roughness": 0.7
+   }
+  },
+  {
+   "type": "light",
+   "light_type": "point",
+   "position": [
+    960,
+    420,
+    350
+   ],
+   "intensity": 90,
+   "color": "#ffe7c2",
+   "casts_shadows": true,
+   "falloff_radius": 2600
+  },
+  {
+   "type": "light",
+   "light_type": "directional",
+   "position": [
+    1500,
+    -400,
+    -300
+   ],
+   "poi": [
+    960,
+    700,
+    300
+   ],
+   "intensity": 60
+  }
+ ]
+}
